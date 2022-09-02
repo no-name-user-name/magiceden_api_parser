@@ -1,0 +1,2 @@
+requests~=2.28.1
+undetected-chromedriver~=3.1.5.post4
