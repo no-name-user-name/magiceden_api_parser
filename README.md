@@ -1,4 +1,4 @@
-MagicEden API parser based on Undetected-Chromedriver.
+MagicEden API parser based on [undetected-chromedriver](https://github.com/ultrafunkamsterdam/undetected-chromedriver).
 
 You can parse all data regardless of Cloudflare.
 
