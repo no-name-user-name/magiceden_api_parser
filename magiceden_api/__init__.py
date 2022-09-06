@@ -232,6 +232,45 @@ class MagicParser:
         url = f'https://api-mainnet.magiceden.io/rpc/getCollectionEscrowStats/{collection_symbol}'
         return self._request(url)
 
+    def get_collection(self, symbol: str) -> dict:
+        """
+        Get collection info
+
+        {
+            "symbol": "urbanites",
+            "candyMachineIds": [
+                "tMCL2JKBC8hFtEUdshUVsxCJU4BPv1ga5RM5RjBYNXt"
+            ],
+            "categories": [
+                "pfps",
+                null
+            ],
+            "createdAt": "2022-09-05T13:48:29.228Z",
+            "description": "Generated and deployed on LaunchMyNFT.",
+            "discord": "",
+            "enabledAttributesFilters": true,
+            "image": "https://nftstorage.link/ipfs/bafybeif2tczmvcms2hff7mxerboi6z6okvabml7vturpzwsa77a5cdidai/11.jpeg",
+            "isAutolist": true,
+            "lmnft": "https://www.launchmynft.io/collections/3wyrgBxtvEL43cqunsBqdTTeTNJn4uxnoqWDdHBTCEu7/MmQ43yEDD1AmyUDIgH4W",
+            "name": "Urbanites",
+            "rarity": {
+                "showMoonrank": false,
+                "showHowrare": true,
+                "showMagicEden": true
+            },
+            "totalItems": 0,
+            "twitter": "https://www.twitter.com/UrbanitesNft",
+            "updatedAt": "2022-09-05T21:07:08.614Z",
+            "watchlistCount": 5,
+            "hasAllItems": true
+        }
+
+        :param symbol:
+        :return:
+        """
+        url = f'https://api-mainnet.magiceden.io/collections/{symbol}'
+        return self._request(url)
+
     def check_collection_scam_flag(self, collection_symbol: str) -> bool:
         """
 

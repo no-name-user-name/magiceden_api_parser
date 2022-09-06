@@ -2,7 +2,7 @@ from pprint import pprint
 
 from magiceden_api import MagicParser
 #  setup parser
-mp = MagicParser(profile='example', driver_headless=False)
+mp = MagicParser(profile='example', driver_headless=True)
 
 #  get most popular collection per 5 min.
 collection = mp.get_popular_collections(limit=1, period='5m')[0]
