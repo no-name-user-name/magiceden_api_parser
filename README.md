@@ -1,5 +1,7 @@
 MagicEden API parser based on [undetected-chromedriver](https://github.com/ultrafunkamsterdam/undetected-chromedriver).
 
+```pip install magiceden-api-parser```
+
 You can parse all data regardless of Cloudflare.
 
 ```python
@@ -24,6 +26,7 @@ holders = mp.get_holders(collection_symbol=symbol)['topHolders']
 Some Methods:
 - get_magiceden_volumes()
 - get_all_collections()
+- get_collection()
 - get_popular_collections()
 - get_launchpad_collections()
 - get_auctions()

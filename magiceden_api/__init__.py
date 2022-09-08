@@ -105,7 +105,7 @@ class MagicParser:
         :return: list of collections.
         """
         url = 'https://api-mainnet.magiceden.io/all_collections_with_escrow_data?edge_cache=true'
-        return self._request(url)
+        return self._request(url)['collections']
 
     def get_all_organizations(self) -> list[dict]:
         """
